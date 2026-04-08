@@ -9,7 +9,8 @@ public static function partituraPerInstrument(array $lista, array $instrument): 
     $resultado = [];
 
     foreach ($lista as $p) {
-        if ($p->getInstrumento() === $instrument) {
+        //intersecta arrays con array_intersect()
+        if (array_intersect($instrument, $p->getInstrumento())) {
             $resultado[] = $p;
         }
     } return $resultado;

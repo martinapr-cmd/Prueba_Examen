@@ -4,7 +4,7 @@ class Partitura {
 
 private string $nombre; 
 private int $año; 
-private array $instrumento = array();
+private array $instrumento = [];
 private string $autor;
 
 public function __construct(string $nombre, int $año, array $instrumento, string $autor)

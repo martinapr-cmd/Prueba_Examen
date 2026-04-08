@@ -14,7 +14,7 @@ $lista = [$p1, $p2, $p3, $p4];
 // print_r($p1->getInstrumento());
 
 $partituraPerInstrumento = Recursos::partituraPerInstrument($lista, ["piano", "guitarra"]);
-echo "Partituras de piano y guitarra: \n";
+echo "Partituras de piano o guitarra: \n";
 foreach ($partituraPerInstrumento as $p) {
     echo "- " . $p->getNombre() . "\n";
 }
