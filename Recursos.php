@@ -3,14 +3,13 @@
 class Recursos {
 
 
-// partitures disp per a mes d'un instrument 
-
-public static function partituraPerInstrument($lista, $instrument) {
+// 1️⃣ partitures disp per a mes d'un instrument 
+public static function partituraPerInstrument(array $lista, array $instrument): array {
 
     $resultado = [];
 
     foreach ($lista as $p) {
-        if ($p->getInstrumento() == $instrument) {
+        if ($p->getInstrumento() === $instrument) {
             $resultado[] = $p;
         }
     } return $resultado;
@@ -18,19 +17,16 @@ public static function partituraPerInstrument($lista, $instrument) {
 
 
 
-//retorna partitures de X autor 
-public static function partituraPerAutor($lista, $autor) {
+// 2️⃣ retorna partitures de X autor 
+public static function partituraPerAutor(array $lista, string $autor): array {
 
-    $resulado = [];
+    $resultado = [];
 
     foreach ($lista as $p) { 
         if ($p->getAutor() == $autor) {
             $resultado[] = $p;
         }
-    } return $resulado;
+    } return $resultado;
 }
-
-
-
 
 }
