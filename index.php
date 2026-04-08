@@ -13,14 +13,14 @@ $lista = [$p1, $p2, $p3, $p4];
 
 // print_r($p1->getInstrumento());
 
-$partituraPerInstrumento = Recursos::partituraPerInstrument($lista, ["piano", "guitarra"]);
+$partituraConXInstrumentos = Recursos::obtenerPartiturasConXInstrumentos($lista, ["piano", "guitarra"]);
 echo "Partituras de piano o guitarra: \n";
-foreach ($partituraPerInstrumento as $p) {
+foreach ($partituraConXInstrumentos as $p) {
     echo "- " . $p->getNombre() . "\n";
 }
  
 
-$partituraDeAutor = Recursos::partituraPerAutor($lista, "D.Rowlin");
+$partituraDeAutor = Recursos::obtenerPartituraPerAutor($lista, "D.Rowlin");
 echo "Partituras de D.Rowlin: \n";
 foreach ($partituraDeAutor as $p) {
     echo "- " . $p->getNombre() . "\n";

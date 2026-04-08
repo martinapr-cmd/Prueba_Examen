@@ -3,14 +3,15 @@
 class Recursos {
 
 
-// 1️⃣ partitures disp per a mes d'un instrument 
-public static function partituraPerInstrument(array $lista, array $instrument): array {
+// 1️⃣ partituras disponibles con mas de un instrumento buscado. 
+
+public static function obtenerPartiturasConXInstrumentos(array $lista, array $instrumento): array {
 
     $resultado = [];
 
     foreach ($lista as $p) {
         //intersecta arrays con array_intersect()
-        if (array_intersect($instrument, $p->getInstrumento())) {
+        if (array_intersect($instrumento, $p->getInstrumento())) {
             $resultado[] = $p;
         }
     } return $resultado;
@@ -19,7 +20,7 @@ public static function partituraPerInstrument(array $lista, array $instrument): 
 
 
 // 2️⃣ retorna partitures de X autor 
-public static function partituraPerAutor(array $lista, string $autor): array {
+public static function obtenerPartituraPerAutor(array $lista, string $autor): array {
 
     $resultado = [];
 
